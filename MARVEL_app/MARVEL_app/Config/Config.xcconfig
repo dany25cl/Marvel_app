@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  MARVEL_app
+//
+//  Created by Daniel Abad Jaraute on 10/03/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MARVEL_API_KEY = 16912f630195448c38655a18a3f06a96
+MARVEL_PRIVATE_KEY = b36e82b83c540e8c6c42244753ac457256f1fbea

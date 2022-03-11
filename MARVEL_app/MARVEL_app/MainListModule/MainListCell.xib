@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Marvel2.otf">
+            <string>BentonSansExtraComp-Black</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CharacterCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="LNz-iQ-OO3" customClass="MainListTableViewCell" customModule="MARVEL_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LNz-iQ-OO3" id="iwJ-ZD-N70">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gra-pp-bnb" userLabel="Card">
+                        <rect key="frame" x="12" y="8" width="390" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UnknownUser" translatesAutoresizingMaskIntoConstraints="NO" id="PrI-aO-iXA">
+                                <rect key="frame" x="16" y="8" width="64" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PrI-aO-iXA" secondAttribute="height" multiplier="1:1" id="1d2-yE-ece"/>
+                                    <constraint firstAttribute="height" constant="64" id="iSX-yA-pA2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="5x8-ii-Q7r">
+                                <rect key="frame" x="96" y="10" width="282" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VNc-Fz-1PH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BentonSansExtraComp-Black" family="BentonSans ExtraComp Black" pointSize="36"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PrI-aO-iXA" secondAttribute="bottom" constant="8" id="3AB-1w-EvZ"/>
+                            <constraint firstItem="PrI-aO-iXA" firstAttribute="leading" secondItem="gra-pp-bnb" secondAttribute="leading" constant="16" id="Baf-Oh-v1v"/>
+                            <constraint firstAttribute="trailing" secondItem="5x8-ii-Q7r" secondAttribute="trailing" constant="12" id="OKB-Pl-ClS"/>
+                            <constraint firstItem="5x8-ii-Q7r" firstAttribute="leading" secondItem="PrI-aO-iXA" secondAttribute="trailing" constant="16" id="bbA-RQ-ZIB"/>
+                            <constraint firstItem="PrI-aO-iXA" firstAttribute="top" secondItem="gra-pp-bnb" secondAttribute="top" constant="8" id="gCf-BF-iB6"/>
+                            <constraint firstItem="5x8-ii-Q7r" firstAttribute="centerY" secondItem="gra-pp-bnb" secondAttribute="centerY" id="pzA-N4-QG5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gra-pp-bnb" firstAttribute="leading" secondItem="iwJ-ZD-N70" secondAttribute="leading" constant="12" id="E3o-eR-M4N"/>
+                    <constraint firstAttribute="trailing" secondItem="gra-pp-bnb" secondAttribute="trailing" constant="12" id="FFL-Im-Aa1"/>
+                    <constraint firstAttribute="bottom" secondItem="gra-pp-bnb" secondAttribute="bottom" constant="8" id="m7T-Wa-w6L"/>
+                    <constraint firstItem="gra-pp-bnb" firstAttribute="top" secondItem="iwJ-ZD-N70" secondAttribute="top" constant="8" id="vin-hi-8re"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgThumbnail" destination="PrI-aO-iXA" id="Gz3-Hv-7lR"/>
+                <outlet property="lbl_name" destination="5x8-ii-Q7r" id="Sn9-Mf-Po5"/>
+                <outlet property="vCard" destination="gra-pp-bnb" id="VE9-Fg-FKv"/>
+            </connections>
+            <point key="canvasLocation" x="863.768115942029" y="-142.63392857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UnknownUser" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
