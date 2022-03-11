@@ -55,7 +55,8 @@ class MainListRemoteDataManager:IRemoteDataManager, MainListRemoteDataManagerInp
                         _error = error
                 }
             }
-            else{
+            else
+            {
                 _error = NSError(domain: "RemoteDataManager", code: response.response?.statusCode ?? 500, userInfo: [NSLocalizedDescriptionKey : "Error en la llamaga get"])
             }
             

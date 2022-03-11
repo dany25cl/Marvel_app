@@ -48,7 +48,6 @@ extension MainDetailView: MainDetailViewProtocol {
         self.activity.isHidden = true
     }
     
-    // TODO: implement view output methods
     func pushCharacter(_ data: MainDetailModel){
         
         self.lbl_name.text = data.name

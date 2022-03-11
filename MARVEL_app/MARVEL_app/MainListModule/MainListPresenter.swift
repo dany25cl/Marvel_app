@@ -20,7 +20,7 @@ class MainListPresenter  {
 extension MainListPresenter: MainListPresenterProtocol {
     
     func viewDidLoad() {
-        
+        reloadData(page: 1, name: nil)
     }
     
     // Get characters from server

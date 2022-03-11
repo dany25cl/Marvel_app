@@ -59,6 +59,7 @@ class MainListView: UIViewController {
     @IBAction func filter(_ sender: Any) {
         filter()
     }
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -83,11 +84,8 @@ class MainListView: UIViewController {
         table.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
         table.backgroundColor = UIColor.init(rgb: Utils.MARVEL_COLORS.BLUE.rawValue)
         
-        //self.table.refreshControl?.beginRefreshing()
-        //self.table.refreshControl?.isHidden = false
         paginatorInitialConfig()
         
-        presenter?.reloadData(page: 1, name: nil)
     }
     
     @objc func callPullToRefresh(){
